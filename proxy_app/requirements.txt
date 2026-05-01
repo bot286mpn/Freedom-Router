@@ -7,6 +7,7 @@ packaging>=23.0
 # GUI dependencies
 customtkinter>=5.2.0
 pillow>=10.0.0
+pyperclip>=1.8.2
 
 # Configuration and utilities
 pyyaml>=6.0.1
@@ -15,3 +16,6 @@ psutil>=5.9.0
 # X-Ray/V2Ray protocol support
 h2>=4.1.0
 httpx>=0.25.0
+
+# Build dependency (for creating EXE)
+pyinstaller>=6.0.0

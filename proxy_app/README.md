@@ -142,17 +142,30 @@ python main.py
 
 ## Сборка в EXE файл
 
-Для создания standalone приложения:
+### 🔹 Автоматическая сборка (Windows):
+
+1. Запустите `build_windows.bat`
+2. Дождитесь завершения сборки
+3. Готовый файл `SecureProxy.exe` появится в папке `dist/`
+
+Скрипт автоматически:
+- Проверит наличие Python
+- Установит все зависимости
+- Скомпилирует приложение в один EXE файл
+
+### 🔹 Ручная сборка:
 
 ```bash
 # Установка PyInstaller
 pip install pyinstaller
 
 # Сборка
-pyinstaller --onefile --windowed --name SecureProxy --icon=icon.ico main.py
+pyinstaller --onefile --windowed --name SecureProxy --add-data "core;core" --add-data "gui;gui" --add-data "configs;configs" main.py
 ```
 
 Готовый файл появится в папке `dist/`.
+
+**Важно:** Для Windows используйте разделитель `;` вместо `:` в опции `--add-data`.
 
 ## Структура проекта
 
